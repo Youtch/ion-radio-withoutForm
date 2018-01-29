@@ -1,0 +1,26 @@
+<ion-header id="ion-header">
+  <ion-toolbar>
+    <ion-title>
+      <ion-chip>
+        <ion-icon name="settings"></ion-icon>
+      </ion-chip>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content id="ion-content">
+ <ion-card class="div-content">
+    <ion-list radio-group>
+      <ion-list-header style="display: inline-block;white-space:pre-wrap;" color="light">
+        <div>The week begins at :</div>
+      </ion-list-header>
+      <ion-item class="ion-item">
+        <ion-label item-right >Sunday</ion-label>
+        <ion-radio item-left mode="ios" [checked]="!boolWeek" (click)="change_choiceDay(false)"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label item-right>Monday</ion-label>
+        <ion-radio item-left mode="ios" [checked]="boolWeek" (click)="change_choiceDay(true)"></ion-radio>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+</ion-content>
